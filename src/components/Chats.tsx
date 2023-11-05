@@ -20,7 +20,7 @@ const Chats: React.FC<Props> = ({ chats, setChats }) => {
       const data = await fetch(url);
       const parsedData = await data.json();
       setChats(chats?.concat(parsedData.chats));
-    }, 900);
+    }, 100);
   };
 
   return (
