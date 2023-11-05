@@ -12,8 +12,8 @@ function App() {
 
   const fetchChats = async () => {
     const url = `https://qa.corider.in/assignment/chat?page=0`
-    let data = await fetch(url);
-    let parsedData: ChatsType = await data.json()
+    const data = await fetch(url);
+    const parsedData: ChatsType = await data.json()
     setChats(parsedData.chats)
     setChatFrom(parsedData.from)
     setChatTo(parsedData.to)

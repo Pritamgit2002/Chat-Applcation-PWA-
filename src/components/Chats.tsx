@@ -48,7 +48,7 @@ const Chats: React.FC<Props> = ({ chats, setChats }) => {
           >
             {!item.sender.self && (
               <div className="relative flex items-start justify-end ">
-                <div className="relative flex items-end justify-end  ">
+                <div className="relative flex items-end justify-end ">
                   <img
                     className="w-8 h-8 mt-3 rounded-full"
                     src={item.sender.image}
