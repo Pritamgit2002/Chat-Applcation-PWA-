@@ -33,13 +33,13 @@ const ChatInput = () => {
             <DropdownMenu.Content className="w-40 bg-[#008000] rounded-full  py-4">
               <div className="flex items-center justify-around ">
                 <div>
-                  <img src="/camera.png" alt="cam" className="w-6 h-6" />
+                  <img src="/camera.png" alt="cam" className="w-6 h-6 cursor-pointer" />
                 </div>
                 <div>
-                  <img src="/rec.png" alt="cam" className="w-6 h-5" />
+                  <img src="/rec.png" alt="cam" className="w-6 h-5 cursor-pointer" />
                 </div>
                 <div>
-                  <img src="/text.png" alt="cam" className="w-6 h-6" />
+                  <img src="/text.png" alt="cam" className="w-6 h-6 cursor-pointer" />
                 </div>
               </div>
               <DropdownMenu.Arrow className="custom-dropdown-arrow"/>
