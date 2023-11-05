@@ -16,8 +16,8 @@ const Chats: React.FC<Props> = ({ chats, setChats }) => {
     setTimeout(async () => {
       setPage(page + 1);
       const url = `https://qa.corider.in/assignment/chat?page=${page + 1}`;
-      let data = await fetch(url);
-      let parsedData = await data.json();
+      const data = await fetch(url);
+      const parsedData = await data.json();
       setChats(chats?.concat(parsedData.chats));
     }, 900);
   };
@@ -46,11 +46,18 @@ const Chats: React.FC<Props> = ({ chats, setChats }) => {
             }`}
           >
             {!item.sender.self && (
-              <img
-                className="w-6 h-6 mt-3 rounded-full"
-                src={item.sender.image}
-                alt="profile"
-              />
+              <div className="relative flex items-end justify-end">
+                <img
+                  className="w-8 h-8 mt-3 rounded-full"
+                  src={item.sender.image}
+                  alt="profile"
+                />
+                <img
+                  src="/Solid.png"
+                  alt="ver"
+                  className="w-3 h-3 rounded-full absolute"
+                />
+              </div>
             )}
             <div
               className={` p-1 ${
