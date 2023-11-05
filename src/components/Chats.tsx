@@ -70,7 +70,7 @@ const Chats: React.FC<Props> = ({ chats, setChats }) => {
               ${
                 !item.sender.self ? "text-[#606060]" : "text-[#FFFFFF]"
               } max-w-fit w-[80%] 
-              ${!item.sender.self ? "bg-green-300" : "bg-[#1C63D5] "} 
+              ${!item.sender.self ? "bg-white" : "bg-[#1C63D5] "} 
               ${
                 !item.sender.self
                   ? "rounded-r-[8px] rounded-bl-[8px]"
