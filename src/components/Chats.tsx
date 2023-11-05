@@ -2,6 +2,7 @@ import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ChatType } from "../Types";
 import Spinner from "./Spinner";
+import "./style.css";
 
 type Props = {
   chats: ChatType[];
@@ -46,29 +47,36 @@ const Chats: React.FC<Props> = ({ chats, setChats }) => {
             }`}
           >
             {!item.sender.self && (
-              <div className="relative flex items-end justify-end">
-                <img
-                  className="w-8 h-8 mt-3 rounded-full"
-                  src={item.sender.image}
-                  alt="profile"
-                />
-                <img
-                  src="/Solid.png"
-                  alt="ver"
-                  className="w-3 h-3 rounded-full absolute"
-                />
+              <div className="relative flex items-start justify-end ">
+                <div className="relative flex items-end justify-end  ">
+                  <img
+                    className="w-8 h-8 mt-3 rounded-full"
+                    src={item.sender.image}
+                    alt="profile"
+                  />
+                  <img
+                    src="/Solid.png"
+                    alt="ver"
+                    className="w-3 h-3 rounded-full absolute"
+                  />
+                </div>
               </div>
             )}
+
             <div
-              className={` p-1 ${
+              className={` p-1  ${
                 !item.sender.self ? "clear-right" : "float-right clear-left"
-              } text-sm md:text-xs shadow-lg my-3 ${
+              } text-sm md:text-xs shadow-lg my-3 
+              ${
                 !item.sender.self ? "text-[#606060]" : "text-[#FFFFFF]"
-              } max-w-fit w-[80%] ${
-                !item.sender.self ? "bg-white" : "bg-[#1C63D5]"
-              } ${!item.sender.self ? "" : "rounded-tl-lg"} rounded-tr-lg ${
-                !item.sender.self ? "rounded-br-lg" : ""
-              } rounded-bl-lg`}
+              } max-w-fit w-[80%] 
+              ${!item.sender.self ? "bg-green-300" : "bg-[#1C63D5] "} 
+              ${
+                !item.sender.self
+                  ? "rounded-r-[8px] rounded-bl-[8px]"
+                  : "rounded-l-[8px] rounded-br-[8px]"
+              } 
+              `}
             >
               {item.message}
             </div>
